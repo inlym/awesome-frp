@@ -11,7 +11,7 @@
 
 ## 🏗️ 项目结构
 
-```
+```text
 awesome-frp/
 ├── server/                 # 服务端配置
 │   ├── frps               # FRP 服务端二进制文件

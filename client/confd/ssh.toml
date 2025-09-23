@@ -1,0 +1,19 @@
+# 代理配置
+# 文档地址：https://gofrp.org/zh-cn/docs/reference/proxy/
+
+[[proxies]]
+
+# 代理名称
+name = "tcp_6000:22"
+
+# 代理类型
+type = "tcp"
+
+# 被代理的本地服务 IP
+localIP = "127.0.0.1"
+
+# 被代理的本地服务端口
+localPort = 22
+
+# 服务端绑定的端口
+remotePort = 6000

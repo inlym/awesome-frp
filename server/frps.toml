@@ -1,0 +1,5 @@
+# 服务端配置
+# 文档地址：https://gofrp.org/zh-cn/docs/reference/server-configures/
+
+# 服务端监听端口，也就是客户端 `serverPort` 要填写的值
+bindPort = 7000

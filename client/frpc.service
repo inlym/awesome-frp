@@ -1,0 +1,33 @@
+﻿[Unit]
+
+# 设置服务描述，便于在 systemctl 中识别
+Description=frp client
+
+# 确保网络完全联通后再启动服务
+After=network-online.target
+
+# 声明软依赖，确保网络目标也会被激活
+Wants=network-online.target
+
+
+[Service]
+
+# 设定为简单类型，主进程与启动命令一致
+Type=simple
+
+# 指定服务启动命令与配置文件位置
+ExecStart=/app/awesome-frp/client/frpc -c /app/awesome-frp/client/frpc.toml
+
+# 启用失败自动重启，提高可用性
+Restart=on-failure
+
+# 设置重启间隔，避免频繁重启
+RestartSec=5s
+
+# 设置停止服务的超时时间
+TimeoutStopSec=30s
+
+[Install]
+
+# 指定服务属于 multi-user 运行级别
+WantedBy=multi-user.target

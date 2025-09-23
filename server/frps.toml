@@ -1,5 +1,34 @@
 # 服务端配置
 # 文档地址：https://gofrp.org/zh-cn/docs/reference/server-configures/
 
-# 服务端监听端口，也就是客户端 `serverPort` 要填写的值
+# 服务端监听端口，用于接收客户端 frpc 的连接
 bindPort = 7000
+
+# Web 管理界面配置
+# 提供服务状态查看、客户端管理和统计信息
+
+# 管理界面监听地址，0.0.0.0 表示监听所有网卡
+webServer.addr = "0.0.0.0"
+
+# 管理界面访问端口，访问地址：http://服务器IP:7500
+webServer.port = 7500
+
+# 管理界面登录用户名
+webServer.user = "admin"
+
+# 管理界面登录密码
+webServer.password = "admin123"
+
+# 日志配置
+
+# 日志文件输出路径，相对于 frps 可执行文件位置
+log.to = "./frps.log"
+
+# 日志记录级别：trace, debug, info, warn, error
+log.level = "info"
+
+# 日志文件保留天数，超过天数的日志文件会被自动删除
+log.maxDays = 3
+
+# 是否禁用控制台日志的颜色输出，false 表示保留颜色
+log.disablePrintColor = false

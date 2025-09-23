@@ -111,16 +111,29 @@ awesome-frp/
    # 根据实际需求修改以下配置项：
    # - server_addr: FRP 服务端地址
    # - server_port: FRP 服务端端口
-   # - 各种代理规则配置
    ```
 
-4. **设置可执行权限**
+4. **添加端口映射配置**
+
+   如需新增端口映射，请在 `client/confd/` 目录中参照 `ssh.toml` 文件格式创建新的配置文件：
+
+   ```bash
+   # 查看示例配置
+   cat client/confd/ssh.toml
+
+   # 创建新的端口映射配置（如：HTTP 服务）
+   vim client/confd/http.toml
+   ```
+
+   **注意**：无需修改 `client/frpc.toml` 文件，所有端口映射配置都放在 `confd/` 目录中。
+
+5. **设置可执行权限**
 
    ```bash
    chmod +x client/frpc
    ```
 
-5. **创建系统服务**
+6. **创建系统服务**
 
    ```bash
    # 创建软链接到 systemd 目录
@@ -136,13 +149,13 @@ awesome-frp/
    sudo systemctl enable frpc
    ```
 
-6. **验证服务状态**
+7. **验证服务状态**
 
    ```bash
    sudo systemctl status frpc
    ```
 
-7. **验证连接**
+8. **验证连接**
 
    ```bash
    # 使用 SSH 测试 FRP 代理是否正常工作

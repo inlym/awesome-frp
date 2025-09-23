@@ -142,6 +142,19 @@ awesome-frp/
    sudo systemctl status frpc
    ```
 
+7. **验证连接**
+
+   ```bash
+   # 使用 SSH 测试 FRP 代理是否正常工作
+   # 请根据您的实际配置修改端口号、用户名和主机地址
+   ssh -o Port=6000 username@host
+   ```
+
+   **说明**：
+   - `6000` 为您在 frpc.toml 中配置的 SSH 代理端口
+   - `username` 为目标服务器的用户名
+   - `host` 为 FRP 服务端的 IP 地址或域名
+
 ## 📋 配置说明
 
 ### 服务端配置 (frps.toml)

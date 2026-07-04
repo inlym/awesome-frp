@@ -249,6 +249,10 @@ sudo systemctl restart frpc  # 客户端
 4. **防火墙配置**: 只开放必要的端口
 5. **定期更新**: 及时更新 FRP 到最新版本
 
+## 🧩 相关项目
+
+- [MoonProxy Desktop](https://github.com/MoonProxyHQ/moonproxy-desktop) - 跨平台 FRP 桌面客户端（frpc GUI），支持 macOS / Windows，为非技术用户提供图形化内网穿透体验，无需命令行即可完成 FRP 客户端配置。
+
 ## 📄 许可证
 
 本项目采用 [MIT 许可证](LICENSE)。

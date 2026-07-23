@@ -168,6 +168,10 @@ awesome-frp/
    - `username` 为目标服务器的用户名
    - `host` 为 FRP 服务端的 IP 地址或域名
 
+### GUI 客户端推荐
+
+- [MoonProxy](https://github.com/MoonProxyHQ/moonproxy-desktop) - MoonProxy Desktop is a cross‑platform FRP GUI client for macOS and Windows, built with Tauri v2, Vue 3, and Rust, offering easy frp configuration, traffic monitoring, auto‑updates, and system‑tray integration.
+
 ## 📋 配置说明
 
 ### 服务端配置 (frps.toml)
